@@ -1,21 +1,4 @@
-E:\CSE-2.1\CarSImulator\CarSImulator\obj\Debug\CarUI.csprojResolveAssemblyReference.cache
-E:\CSE-2.1\CarSImulator\CarSImulator\obj\Debug\CarSImulator.Screen.resources
-E:\CSE-2.1\CarSImulator\CarSImulator\obj\Debug\CarSImulator.Properties.Resources.resources
-E:\CSE-2.1\CarSImulator\CarSImulator\obj\Debug\CarUI.csproj.GenerateResource.Cache
-E:\CSE-2.1\CarSImulator\CarSImulator\bin\Debug\CarSImulator.exe.config
-E:\CSE-2.1\CarSImulator\CarSImulator\bin\Debug\CarSImulator.exe
-E:\CSE-2.1\CarSImulator\CarSImulator\bin\Debug\CarSImulator.pdb
-E:\CSE-2.1\CarSImulator\CarSImulator\bin\Debug\Entity.dll
-E:\CSE-2.1\CarSImulator\CarSImulator\bin\Debug\Entity.pdb
-E:\CSE-2.1\CarSImulator\CarSImulator\obj\Debug\CarSImulator.exe
-E:\CSE-2.1\CarSImulator\CarSImulator\obj\Debug\CarSImulator.pdb
-E:\CSE-2.1\CarSImulator\CarSImulator\bin\Debug\BO.dll
-E:\CSE-2.1\CarSImulator\CarSImulator\bin\Debug\BO.pdb
-E:\CSE-2.1\CarSImulator\CarSImulator\bin\Debug\DAL.dll
-E:\CSE-2.1\CarSImulator\CarSImulator\bin\Debug\DAL.pdb
 D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\bin\Debug\CarSImulator.exe.config
-D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\obj\Debug\CarSImulator.exe
-D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\obj\Debug\CarSImulator.pdb
 D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\bin\Debug\CarSImulator.exe
 D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\bin\Debug\CarSImulator.pdb
 D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\bin\Debug\BO.dll
@@ -28,3 +11,5 @@ D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\obj\Debug\CarUI.csprojResolve
 D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\obj\Debug\CarSImulator.Screen.resources
 D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\obj\Debug\CarSImulator.Properties.Resources.resources
 D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\obj\Debug\CarUI.csproj.GenerateResource.Cache
+D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\obj\Debug\CarSImulator.exe
+D:\2_1\c#\New folder (5)\CarSImulator\CarSImulator\obj\Debug\CarSImulator.pdb

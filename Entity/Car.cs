@@ -34,10 +34,17 @@ namespace Entity
         ///
         Point[] bodyPontsH;
         Point[] windowPointsH;
+        Point[] inWindow1;
+        Point[] inWindow2;
         Rectangle wheelL = new Rectangle(0,0,20,20);
         Rectangle wheelR = new Rectangle(0, 0, 20, 20);
+        Rectangle outWheelL = new Rectangle(0, 0, 10, 10);
+        Rectangle outWheelR= new Rectangle(0, 0, 10, 10);
         Rectangle headLightR = new Rectangle(0, 0, 10, 10);
         Rectangle headLightL = new Rectangle(0, 0, 10, 10);
+        Rectangle backlightR = new Rectangle(0, 0, 10, 10);
+
+        Rectangle backlightL = new Rectangle(0, 0, 10, 10);
 
         Rectangle collisionBoxH = new Rectangle() ; //left right collision
         Rectangle collisionBoxV = new Rectangle() ;
@@ -109,15 +116,38 @@ namespace Entity
                         pos.X += speed;
                     
                     bodyPontsH = new Point[4] { new Point(pos.X - 40, pos.Y - 15), new Point(pos.X - 50, pos.Y + 15), new Point(pos.X + 50, pos.Y + 15), new Point(pos.X + 40, pos.Y - 15) };//, new Point(pos.X - 30, pos.Y - 10) };
-                    windowPointsH = new Point[4] { new Point(pos.X - 20, pos.Y - 35), new Point(pos.X - 25, pos.Y - 15), new Point(pos.X + 25, pos.Y - 15), new Point(pos.X + 20, pos.Y - 35) };
+                    
+
+                    
+                    windowPointsH = new Point[4]{ new Point(pos.X - 30, pos.Y - 35), new Point(pos.X - 35, pos.Y - 15), new Point(pos.X + 25, pos.Y - 15), new Point(pos.X + 20, pos.Y - 35) };
+
+
+
+
+                    inWindow1 = new Point[4] { new Point(pos.X - 8, pos.Y - 25), new Point(pos.X - 12, pos.Y - 5), new Point(pos.X + 8, pos.Y - 5), new Point(pos.X + 10, pos.Y - 25) };
+
+                  // inWindow2 = new Point[4] { new Point(pos.X - 1, pos.Y - 25), new Point(pos.X - 6, pos.Y - 5), new Point(pos.X + 30, pos.Y - 5), new Point(pos.X + 35, pos.Y - 25) };
+
                     wheelL.X = pos.X - 20 - 10;
                     wheelL.Y = pos.Y + 15 - 10;
 
                     wheelR.X = pos.X + 20 - 10;
                     wheelR.Y = pos.Y + 15 - 10;
 
+
+                   
+                    outWheelL.X = pos.X - 20 - 5;
+                    outWheelL.Y = pos.Y + 10 - 2;
+
+                    outWheelR.X = pos.X + 20 - 5;
+                    outWheelR.Y = pos.Y + 10 - 2;
+
+
                     headLightR.X = pos.X + 40;
                     headLightR.Y = pos.Y;
+                    backlightR.X = pos.X - 50;
+                    backlightR.Y = pos.Y;
+
 
                     break;
 
@@ -130,8 +160,10 @@ namespace Entity
                     if (!collides(collisionBoxH))
                         pos.X -= speed;
                     bodyPontsH = new Point[4] { new Point(pos.X - 40, pos.Y - 15), new Point(pos.X - 50, pos.Y + 15), new Point(pos.X + 50, pos.Y + 15), new Point(pos.X + 40, pos.Y - 15) };//, new Point(pos.X - 30, pos.Y - 10) };
-                    windowPointsH = new Point[4] { new Point(pos.X - 20, pos.Y - 35), new Point(pos.X - 25, pos.Y - 15), new Point(pos.X + 25, pos.Y - 15), new Point(pos.X + 20, pos.Y - 35) };
+                    windowPointsH = new Point[4] { new Point(pos.X - 25, pos.Y - 35), new Point(pos.X - 35, pos.Y - 15), new Point(pos.X + 25, pos.Y - 15), new Point(pos.X + 20, pos.Y - 35) };
 
+                    inWindow1 = new Point[4] { new Point(pos.X - 8, pos.Y - 25), new Point(pos.X - 12, pos.Y - 5), new Point(pos.X + 8, pos.Y - 5), new Point(pos.X + 10, pos.Y - 25) };
+                   // inWindow2 = new Point[4] { new Point(pos.X - 1, pos.Y - 25), new Point(pos.X - 6, pos.Y - 5), new Point(pos.X + 30, pos.Y - 5), new Point(pos.X + 35, pos.Y - 25) };
                     wheelL.X = pos.X - 20 - 10;
                     wheelL.Y = pos.Y + 15 - 10;
 
@@ -139,8 +171,21 @@ namespace Entity
                     wheelR.Y = pos.Y + 15 - 10;
 
 
+                    outWheelL.X = pos.X - 20 - 5;
+                    outWheelL.Y = pos.Y + 10 - 2;
+
+                    outWheelR.X = pos.X + 20 - 5;
+                    outWheelR.Y = pos.Y + 10 - 2;
+
+
+
+
                     headLightR.X = pos.X - 50;
                     headLightR.Y = pos.Y;
+
+                     backlightR.X = pos.X +40;
+                    backlightR.Y = pos.Y;
+
 
                     break;
                 case Direction.up:
@@ -161,6 +206,8 @@ namespace Entity
 
                     headLightL.X = pos.X - 18- headLightR.Width / 2;
                     headLightL.Y = pos.Y - 45;
+
+                    
 
 
                     break;
@@ -191,26 +238,38 @@ namespace Entity
 
             if (carDir == Direction.left || carDir == Direction.right)
             {
-                p.Color = Color.Red;
-                p.Width = 5;
+                p.Color = Color.CornflowerBlue;
+                p.Width = 7;
                 //g.FillRectangle(p.Brush, carBody);
                 g.FillPolygon(p.Brush, bodyPontsH);
-                p.Color = Color.Blue;
+                p.Color = Color.CornflowerBlue;
                 g.FillPolygon(p.Brush, windowPointsH);
 
                 p.Color = Color.Black;
                 g.FillEllipse(p.Brush, wheelL);
                 g.FillEllipse(p.Brush, wheelR);
 
+
+                
+
+                p.Color = Color.LightGray;
+                g.FillEllipse(p.Brush, outWheelL);
+                g.FillEllipse(p.Brush, outWheelR);
+
+
                 p.Color = Color.Yellow;
                 g.FillEllipse(p.Brush, headLightR);
+                g.FillEllipse(p.Brush, backlightR);
+                p.Color = Color.LightBlue;
+                g.FillPolygon(p.Brush, inWindow1);
+             //   g.FillPolygon(p.Brush, inWindow2);
 
 
             
             }
             else if(carDir == Direction.up || carDir == Direction.down)
             {
-                p.Color = Color.Red;
+                p.Color = Color.CornflowerBlue;
                 g.FillRectangle(p.Brush, carBody);
 
 
@@ -218,7 +277,7 @@ namespace Entity
                 p.Color = Color.Blue;
                 g.FillRectangle(p.Brush, carGlass);
 
-                p.Color = Color.Red;
+                p.Color = Color.CornflowerBlue;
                 g.FillRectangle(p.Brush, carRoof);
 
                 p.Color = Color.Yellow;
